@@ -21,14 +21,15 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: Install & Generate 🔧
-      run: 
-    
+    - name: Install dependencies and build  🔧
+      run: |
+        npm install
         npm run generate
       env:
-        NUXT_APP_BASE_URL: ${{ vars.NUXT_APP_BASE_URL  }}
+        NUXT_APP_BASE_URL: ${{ secrets.NUXT_APP_BASE_URL  }}
 
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4
       with:
+          branch: gh-pages # 변경: GitHub Pages로 배포하기 위해 gh-pages 브랜치 사용
         folder: dist
