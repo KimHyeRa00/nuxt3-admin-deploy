@@ -31,4 +31,9 @@ export default defineNuxtConfig({
       enabled: false,
     },
   },
+
+  target: 'static',
+  router: {
+    base: '/my-nuxt-app/' // 프로젝트 이름에 맞게 수정
+  },
 });
