@@ -1,1 +1,0 @@
-import{_ as e}from"./_plugin-vue_export-helper.x3n3nnut.js";import{c as o,o as t,a as s}from"./entry.LS5kptLK.js";const c={},n=s("h1",{class:"text-3xl font-bold"}," Users ",-1),r=[n];function a(_,d){return t(),o("div",null,r)}const i=e(c,[["render",a]]);export{i as default};
