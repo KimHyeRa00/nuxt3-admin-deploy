@@ -1,0 +1,1 @@
+import{u as o}from"./vue.f36acd1f.s9a0bcLZ.js";import{f as t,o as s,c as a,a as e}from"./entry.Dw3_2H7s.js";const n=e("h1",{class:"text-3xl font-bold"}," Inbox ",-1),r=e("hr",{class:"my-2 border dark:border-gray-700"},null,-1),c=[n,r],p=t({__name:"index",setup(_){return o({title:"Inbox"}),(d,l)=>(s(),a("div",null,c))}});export{p as default};
