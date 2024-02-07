@@ -33,7 +33,13 @@ export default defineNuxtConfig({
   },
 
   target: 'static',
+
+
   router: {
-    base: '/my-nuxt-app/' // 프로젝트 이름에 맞게 수정
+    base: '/nuxt3-admin-deploy/'// 프로젝트 이름에 맞게 수정
   },
+  generate: {
+    dir: 'dist/nuxt3-admin-deploy'
+  }
+
 });
