@@ -2,9 +2,16 @@
 </script>
 
 <template>
-  <nav class="hidden md:block lg:w-64 sm:w-32 text-md text-[#99a2ba] p-6 py-10 h-full rounded-3xl sticky top-10 z-10">
+  <nav class="aside lg:rounded-2xl flex-1 flex flex-col overflow-hidden bg-gray-900 h-screen-cuscom">
     <LayoutSidebarList />
   </nav>
 </template>
+
+<style>
+.h-screen-cuscom{
+  height: calc(100vh - 50px);
+
+}
+</style>
 
 

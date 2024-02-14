@@ -31,9 +31,7 @@ const toggleOpen = () => {
 
 <template>
   <li class="my-2" v-if="item.isTitle" :item="item">
-    <div class="font-bold my-2 text-lg text-[#b3b8c5] hidden lg:block">
-      {{ item.name }}
-    </div>
+
   </li>
   <li class="my-2" v-else-if="item.submenu.length === 0">
     <div :data-tooltip-show="type === 'md'" data-tooltip-pos="right" :aria-label="item.name">
@@ -44,8 +42,8 @@ const toggleOpen = () => {
         }"
         :exact-active-class="level === 1 ? 'bg-gray-900 bg-opacity-40 !md:hover:bg-opacity-60 border-b-4 !border-gray-50 !border-opacity-50 !text-[#f0f0f0] font-bold' : 'border-l-2 !border-gray-50 !border-opacity-70 font-bold bg-gray-900 bg-opacity-40 !text-[#f0f0f0]'"
         @click="sidebarStore.mobileOpen = false">
-        <TwFeather v-if="item.icon" :type="item.icon"></TwFeather>
-        <div class="md:hidden lg:block select-none whitespace-nowrap overflow-hidden text-ellipsis">
+        <TwFeather v-if="item.icon" :type="item.icon" class="text-gray-300"></TwFeather>
+        <div class="md:hidden lg:block select-none whitespace-nowrap overflow-hidden text-ellipsis text-white">
           {{ item.name }}
         </div>
       </nuxt-link>
@@ -55,12 +53,12 @@ const toggleOpen = () => {
     <div :data-tooltip-show="type === 'md'" data-tooltip-pos="right" :aria-label="item.name" @click="toggleOpen">
       <div
         class="flex md:justify-center lg:justify-start duration-300 items-center rounded-lg gap-3 cursor-pointer px-5 py-3 md:hover:bg-gray-900 md:hover:bg-opacity-40 border-transparent">
-        <TwFeather v-if="item.icon" :type="item.icon"></TwFeather>
-        <div class="md:hidden lg:block select-none whitespace-nowrap overflow-hidden text-ellipsis">
+        <TwFeather v-if="item.icon" :type="item.icon" class="text-gray-300"></TwFeather>
+        <div class="md:hidden lg:block select-none whitespace-nowrap overflow-hidden text-ellipsis text-white">
           {{ item.name }}
         </div>
         <div class="md:hidden lg:flex ml-auto items-center">
-          <TwFeather type="chevron-down" class="duration-300" :class="{ 'rotate-180': isOpen }"></TwFeather>
+          <TwFeather type="chevron-down" class="duration-300 text-white" :class="{ 'rotate-180': isOpen }"></TwFeather>
         </div>
       </div>
     </div>
